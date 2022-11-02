@@ -11,5 +11,5 @@ It helps user to shorten the long url's. This app uses caching mechanism to fetc
 
 ### Usage
 ```
-
-App URL : 
+App URL : https://flask-short-url-app.herokuapp.com/
+```
