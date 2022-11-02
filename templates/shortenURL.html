@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main>
+        <div class="url__lists">
+            <ul>
+                <li class="url__lists-item">
+                    Original URL : <a class="url__lists-url" href="{{ URL_LIST['original'] }}" target="_blank">{{ URL_LIST['original'] }}</a>
+                </li>
+                <li class="url__lists-item">
+                    Shorten URL : <a class="url__lists-url" href="{{ URL_LIST['original'] }}" target="_blank">{{ URL_LIST['localhost'] }}{{ URL_LIST['shorten'] }}</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+{% endblock %}

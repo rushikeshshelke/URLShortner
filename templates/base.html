@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-Shortner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <header class="header">
+        <a class="header-homepage" href="{{ url_for('urlshortner.shortenURL') }}"><h1>URL Shortner</h1></a>
+    </header>
+    <main class="main">
+        <form method="POST">
+            <div class="form">
+                <textarea class="form__input" id="longURL" name="longURL" rows="2" placeholder="Enter URL here"></textarea>
+                <button class="form__button" type="submit">Shorten URL</button>
+            </div>
+        </form>
+        {% with messages = get_flashed_messages() %}  
+            {% if messages %}  
+                {% for message in messages %}  
+                    <p>{{ message }}</p>  
+                {% endfor %}  
+            {% endif %}  
+        {% endwith %}  
+    </main>
+    <section class="main__content">
+        {% block content %}
+
+        {% endblock %}
+    </section>
+</body>
+</html>
