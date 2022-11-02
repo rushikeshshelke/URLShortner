@@ -55,7 +55,5 @@ class CommonConfigs:
             )
             for entries in current_app.db.urlids.find({})
         ]
-
-        GlobalVariables.LOGGER.info("url id's : {}".format(urlids))
-    
+            
         return urlids
